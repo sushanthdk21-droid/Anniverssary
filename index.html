@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta
+    name="description"
+    content="A romantic anniversary celebration website."
+  />
+
+  <title>Happy Anniversary, My Love</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&family=Dancing+Script:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- Loading Screen -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader-heart">♥</div>
+    <p>Loading our story...</p>
+  </div>
+
+  <!-- Floating Hearts -->
+  <div class="floating-hearts" id="floatingHearts" aria-hidden="true"></div>
+
+  <!-- Navigation -->
+  <header class="navbar">
+    <a href="#home" class="logo" aria-label="Home">♥</a>
+
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="#story">Our Story</a>
+      <a href="#memories">Memories</a>
+      <a href="#letter">Love Letter</a>
+      <a href="#reasons">Why I Love You</a>
+    </nav>
+
+    <button
+      class="music-toggle"
+      id="musicToggle"
+      type="button"
+      aria-label="Play background music"
+      aria-pressed="false"
+    >
+      <span id="musicIcon">♫</span>
+    </button>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+
+      <div class="hero-glow"></div>
+
+      <div class="hero-content reveal">
+
+        <p class="eyebrow">A celebration of us</p>
+
+        <div class="hero-heart" aria-hidden="true">
+          <span>♥</span>
+        </div>
+
+        <h1>
+          Happy Anniversary,
+          <span>My Love</span>
+        </h1>
+
+        <p class="hero-subtitle" id="heroMessage">
+          Every love story is beautiful, but ours is my favorite.
+        </p>
+
+        <p class="anniversary-date" id="heroDate">
+          Our special day
+        </p>
+
+        <a href="#story" class="primary-button">
+          Our Story
+          <span>↓</span>
+        </a>
+
+      </div>
+
+      <div class="scroll-indicator" aria-hidden="true">
+        <span></span>
+        Scroll to explore
+      </div>
+
+    </section>
+
+
+    <!-- STORY -->
+    <section class="section story-section" id="story">
+
+      <div class="section-heading reveal">
+        <p class="eyebrow">Chapter one</p>
+        <h2>Our Story</h2>
+        <p>
+          A collection of little moments that became our favorite memories.
+        </p>
+      </div>
+
+      <div class="timeline" id="timeline">
+        <!-- JavaScript generates timeline -->
+      </div>
+
+    </section>
+
+
+    <!-- MEMORIES -->
+    <section class="section memories-section" id="memories">
+
+      <div class="section-heading reveal">
+        <p class="eyebrow">Captured moments</p>
+        <h2>Our Memories</h2>
+        <p>
+          Some moments deserve to live forever.
+        </p>
+      </div>
+
+      <div class="gallery" id="gallery">
+        <!-- JavaScript generates gallery -->
+      </div>
+
+    </section>
+
+
+    <!-- LOVE LETTER -->
+    <section class="section letter-section" id="letter">
+
+      <div class="section-heading reveal">
+        <p class="eyebrow">A little something for you</p>
+        <h2>My Love Letter</h2>
+      </div>
+
+      <div class="letter-card reveal">
+
+        <div class="letter-decoration top">♥</div>
+
+        <p class="letter-greeting">My Love,</p>
+
+        <div class="typing-container">
+          <p id="loveLetter"></p>
+          <span class="typing-cursor" id="typingCursor">|</span>
+        </div>
+
+        <p class="letter-signature" id="letterSignature">
+          Forever yours,
+        </p>
+
+        <div class="letter-decoration bottom">♥</div>
+
+      </div>
+
+    </section>
+
+
+    <!-- REASONS -->
+    <section class="section reasons-section" id="reasons">
+
+      <div class="section-heading reveal">
+        <p class="eyebrow">There are countless reasons</p>
+        <h2>Why I Love You</h2>
+        <p>
+          But these are a few that will always have a special place in my heart.
+        </p>
+      </div>
+
+      <div class="reasons-grid" id="reasonsGrid">
+        <!-- JavaScript generates cards -->
+      </div>
+
+    </section>
+
+
+    <!-- COUNTER -->
+    <section class="counter-section">
+
+      <div class="counter-overlay"></div>
+
+      <div class="counter-content reveal">
+
+        <p class="eyebrow">And every second still counts</p>
+
+        <h2>Our Time Together</h2>
+
+        <div class="counter-grid">
+
+          <div class="counter-item">
+            <strong id="years">0</strong>
+            <span>Years</span>
+          </div>
+
+          <div class="counter-item">
+            <strong id="months">0</strong>
+            <span>Months</span>
+          </div>
+
+          <div class="counter-item">
+            <strong id="days">0</strong>
+            <span>Days</span>
+          </div>
+
+          <div class="counter-item">
+            <strong id="hours">0</strong>
+            <span>Hours</span>
+          </div>
+
+          <div class="counter-item">
+            <strong id="minutes">0</strong>
+            <span>Minutes</span>
+          </div>
+
+          <div class="counter-item">
+            <strong id="seconds">0</strong>
+            <span>Seconds</span>
+          </div>
+
+        </div>
+
+        <p class="counter-message">
+          And I would choose you again, every single time.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- SURPRISE -->
+    <section class="section surprise-section">
+
+      <div class="surprise-card reveal">
+
+        <div class="surprise-heart" aria-hidden="true">♥</div>
+
+        <p class="eyebrow">One more thing...</p>
+
+        <h2>I Have A Surprise For You</h2>
+
+        <p>
+          There is something I want you to remember.
+        </p>
+
+        <button
+          class="primary-button surprise-button"
+          id="surpriseButton"
+          type="button"
+        >
+          Click for a Surprise
+          <span>♥</span>
+        </button>
+
+        <div
+          class="surprise-message"
+          id="surpriseMessage"
+          aria-live="polite"
+        ></div>
+
+      </div>
+
+    </section>
+
+
+    <!-- FINAL -->
+    <section class="final-section">
+
+      <div class="final-content reveal">
+
+        <div class="final-heart" aria-hidden="true">♥</div>
+
+        <p class="eyebrow">Until forever</p>
+
+        <h2>Forever <span>&</span> Always</h2>
+
+        <p class="couple-names" id="coupleNames">
+          Your Names
+        </p>
+
+        <p class="final-date" id="finalDate">
+          Our special day
+        </p>
+
+        <blockquote id="anniversaryQuote">
+          "I found my forever in you."
+        </blockquote>
+
+        <div class="final-line"></div>
+
+        <p class="final-message">
+          Here's to every memory we've made,
+          every dream we're yet to chase,
+          and every beautiful chapter still waiting for us.
+        </p>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- Audio -->
+  <audio id="backgroundMusic" loop preload="none">
+    <source id="musicSource" src="" type="audio/mpeg">
+  </audio>
+
+
+  <!-- Lightbox -->
+  <div
+    class="lightbox"
+    id="lightbox"
+    aria-hidden="true"
+    role="dialog"
+    aria-label="Photo viewer"
+  >
+
+    <button
+      class="lightbox-close"
+      id="lightboxClose"
+      type="button"
+      aria-label="Close photo viewer"
+    >
+      ×
+    </button>
+
+    <button
+      class="lightbox-nav previous"
+      id="previousPhoto"
+      type="button"
+      aria-label="Previous photo"
+    >
+      ‹
+    </button>
+
+    <div class="lightbox-content">
+      <img id="lightboxImage" src="" alt="" />
+      <p id="lightboxCaption"></p>
+    </div>
+
+    <button
+      class="lightbox-nav next"
+      id="nextPhoto"
+      type="button"
+      aria-label="Next photo"
+    >
+      ›
+    </button>
+
+  </div>
+
+
+  <!-- Confetti Container -->
+  <div
+    class="confetti-container"
+    id="confettiContainer"
+    aria-hidden="true"
+  ></div>
+
+
+  <footer>
+    <p>
+      Made with <span>♥</span> for a love that lasts forever.
+    </p>
+  </footer>
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>
